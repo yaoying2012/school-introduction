@@ -10,11 +10,11 @@ git clone https://github.com/yaoying2012/school-introduction.git
 ```
 2. 安装依赖（确保您有Python环境）
 ``` bash
+cd school-introduction
 python -m pip install -r requirements.txt
 ```
 3. 启动服务
 ``` bash
-cd school-introduction
 python main.py
 ```
 4. 访问网站
