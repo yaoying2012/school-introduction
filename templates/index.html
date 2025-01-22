@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block title %}Main page{% endblock %}
+
+{% block head %}
+    <link rel="stylesheet" href="/static/css/index.css">
+    <link rel="stylesheet" href="/static/css/background.css">
+    <link rel="stylesheet" href="/static/css/scroll-down-indicator.css">
+{% endblock %}
+
+{% block content %}
+    <div id="background" style="background-image: url('/static/img/school-gate.webp')"></div>
+    <div class="whole_screen">
+        <div id="welcome" class="welcome">Welcome to our school -- {{ school_name }}!</div>
+    </div>
+    <div class="scroll-down-indicator">
+        <div class="arrow"></div>
+    </div>
+    <script>window.url = "/about_us"</script>
+    <script src="/static/js/roll_redirect.js"></script>
+{% endblock %}

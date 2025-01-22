@@ -1,0 +1,20 @@
+body {
+	height: 105vh;
+}
+
+.whole_screen {
+	margin-top: 30vh;
+    z-index: 5;
+    background-attachment: fixed;
+}
+
+#welcome {
+    color: #6ff;
+    font-size: 3.5em;
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.9);
+    text-align: center;
+    background-attachment: fixed;
+	margin: 15vw;
+    z-index: 5;
+    animation: fadeInWelcome 1s ease-in-out;
+}

@@ -1,0 +1,27 @@
+.scroll-down-indicator {
+    position: fixed;
+    bottom: calc(5em + 35px);
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+	z-index: 10;
+}
+
+.arrow {
+    width: 24px;
+    height: 24px;
+    border: 2px solid #ff7b9e;
+    border-top-width: 0;
+    border-left-width: 0;
+    transform: rotate(45deg);
+    animation: bounce 1.5s infinite;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0) rotate(45deg);
+    }
+    50% {
+        transform: translateY(10px) rotate(45deg);
+    }
+}

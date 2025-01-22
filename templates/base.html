@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduce my school to the world - {% block title %}title{% endblock %}</title>
+    <link rel="stylesheet" href="/static/css/base.css">
+    <link rel="shortcut icon" href="/static/img/favicon.ico" type="image/x-icon">
+    {% block head %}{% endblock %}
+</head>
+<body>
+    <header id="header">
+        <a href="/about" class="header_link">About us</a>
+        <a href="/facilities" class="header_link">Facilities</a>
+        <a href="/contact" class="header_link">Contact us</a>
+    </header>
+    {% block content %}{% endblock %}
+    <footer id="footer">
+        <a href="/log" class="footer_link">Log</a>
+        <a href="/sitemap" class="footer_link">Sitemap</a>
+        <a href="/license" class="footer_link">License</a>
+    </footer>
+</body>
+</html>

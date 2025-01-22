@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block title %}{% endblock %}
+
+{% block head %}
+    <link rel="stylesheet" href="/static/css/article.css">
+    <link rel="stylesheet" href="/static/css/background.css">
+    <link rel="stylesheet" href="/static/css/scroll-down-indicator.css">
+{% endblock %}
+
+{% block content %}
+    <div id="background" style="background-image: url({% block img_url %} {% endblock %});"></div>
+    <div id="article">
+        <div id="title">{% block article_title %}{% endblock %}</div>
+        <div id="content">{% block article_content %}{% endblock %}</div>
+    </div>
+    <div class="scroll-down-indicator">
+        <div class="arrow"></div>
+    </div>
+    <script>window.url = {% block url %}{% endblock %}</script>
+    <script src="/static/js/roll_redirect.js"></script>
+{% endblock %}
