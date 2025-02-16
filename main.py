@@ -1,9 +1,12 @@
 from flask import Flask, render_template, send_from_directory, make_response
 from werkzeug.utils import safe_join
 from os.path import exists, abspath, dirname, join
+import socket
 import logging
 
 school_name = 'Hangzhou Wenli Middle School'
+target_host = '0.0.0.0'
+target_port = 8080
 
 
 def get_file(file_name):
@@ -16,6 +19,11 @@ def get_file(file_name):
         return response
     logging.debug(f"file file not found: {file_name}")
     return "file file not found", 404
+
+
+def check_port(host, port):
+    with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
+        return s.connect_ex((host, port)) == 0
 
 
 logging.basicConfig(level=logging.DEBUG)
@@ -89,4 +97,6 @@ def show_license():
 
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=8080)
+    while check_port(target_host, target_port):
+        target_port += 1
+    app.run(host=target_host, port=target_port)
